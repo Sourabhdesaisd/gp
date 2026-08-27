@@ -1,0 +1,36 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+/home/vvtrainee44/Desktop/new_pinaka/PINAKA/rtl/ip/basic_isa/alu_top32.v
+/home/vvtrainee44/Desktop/new_pinaka/PINAKA/rtl/ip/basic_isa/arithmetic_unit32.v
+/home/vvtrainee44/Desktop/new_pinaka/PINAKA/rtl/ip/basic_isa/branch_jump_unit.v
+/home/vvtrainee44/Desktop/new_pinaka/PINAKA/rtl/ip/basic_isa/btb_file.v
+/home/vvtrainee44/Desktop/new_pinaka/PINAKA/rtl/ip/basic_isa/btb_read.v
+/home/vvtrainee44/Desktop/new_pinaka/PINAKA/rtl/ip/basic_isa/btb.v
+/home/vvtrainee44/Desktop/new_pinaka/PINAKA/rtl/ip/basic_isa/btb_write.v
+/home/vvtrainee44/Desktop/new_pinaka/PINAKA/rtl/ip/basic_isa/compare_unit32.v
+/home/vvtrainee44/Desktop/new_pinaka/PINAKA/rtl/ip/basic_isa/control_unit.v
+/home/vvtrainee44/Desktop/new_pinaka/PINAKA/rtl/ip/basic_isa/data_memory.v
+/home/vvtrainee44/Desktop/new_pinaka/PINAKA/rtl/ip/basic_isa/data_mem_top.v
+/home/vvtrainee44/Desktop/new_pinaka/PINAKA/rtl/ip/basic_isa/decode_unit.v
+/home/vvtrainee44/Desktop/new_pinaka/PINAKA/rtl/ip/basic_isa/dynamic_branch_predictor.v
+/home/vvtrainee44/Desktop/new_pinaka/PINAKA/rtl/ip/basic_isa/execute_stage.v
+/home/vvtrainee44/Desktop/new_pinaka/PINAKA/rtl/ip/basic_isa/ex_mem_pipe.v
+/home/vvtrainee44/Desktop/new_pinaka/PINAKA/rtl/ip/basic_isa/forwarding_unit.v
+/home/vvtrainee44/Desktop/new_pinaka/PINAKA/rtl/ip/basic_isa/hazard_unit.v
+/home/vvtrainee44/Desktop/new_pinaka/PINAKA/rtl/ip/basic_isa/id_ex_pipe.v
+/home/vvtrainee44/Desktop/new_pinaka/PINAKA/rtl/ip/basic_isa/if_id_pipe.v
+/home/vvtrainee44/Desktop/new_pinaka/PINAKA/rtl/ip/basic_isa/if_stage_simple_btb.v
+/home/vvtrainee44/Desktop/new_pinaka/PINAKA/rtl/ip/basic_isa/inst_mem.v
+/home/vvtrainee44/Desktop/new_pinaka/PINAKA/rtl/ip/basic_isa/load_datapath.v
+/home/vvtrainee44/Desktop/new_pinaka/PINAKA/rtl/ip/basic_isa/logical_unit32.v
+/home/vvtrainee44/Desktop/new_pinaka/PINAKA/rtl/ip/basic_isa/mem_stage.v
+/home/vvtrainee44/Desktop/new_pinaka/PINAKA/rtl/ip/basic_isa/mem_wb_pipe.v
+/home/vvtrainee44/Desktop/new_pinaka/PINAKA/rtl/ip/basic_isa/pc_reg.v
+/home/vvtrainee44/Desktop/new_pinaka/PINAKA/rtl/ip/basic_isa/register_file.v
+/home/vvtrainee44/Desktop/new_pinaka/PINAKA/rtl/ip/basic_isa/rv32i_core.v
+/home/vvtrainee44/Desktop/new_pinaka/PINAKA/rtl/ip/basic_isa/shift_unit32.v
+/home/vvtrainee44/Desktop/new_pinaka/PINAKA/rtl/ip/basic_isa/store_datapath.v
+/home/vvtrainee44/Desktop/new_pinaka/PINAKA/rtl/ip/basic_isa/top_decode.v
+/home/vvtrainee44/Desktop/new_pinaka/PINAKA/rtl/ip/basic_isa/wb_stage.v

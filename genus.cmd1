@@ -1,0 +1,18 @@
+# Cadence Genus(TM) Synthesis Solution, Version 17.22-s017_1, built Apr  1 2018
+
+# Date: Wed Mar 01 23:02:52 2023
+# Host: compute1-srv.nis.vivartan.com (x86_64 w/Linux 3.10.0-1160.119.1.el7.x86_64) (28cores*112cpus*2physical cpus*Intel(R) Xeon(R) Platinum 8173M CPU @ 2.00GHz 39424KB)
+# OS:   CentOS Linux release 7.9.2009 (Core)
+
+source syn_final.tcl
+help *pot*
+help *opt*
+get_db tns_opto
+help *opt*
+get_db syn_global_effort
+set_db syn_opt_effort true
+get_db syn_opt_effort true
+get_db syn_opt_effort
+report_timing -from [all_registers] -to [all_registers]
+report_timing -from [all_register] -to [all_register]
+exit

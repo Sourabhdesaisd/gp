@@ -1,0 +1,13 @@
+
+ 	 Check Design Report
+	 -------------------- 
+
+  Unresolved References & Empty Modules
+  ------------------------------------- 
+No unresolved references in design 'pinaka'
+
+design 'pinaka' has the following empty module(s)
+circular_buffer_DATA_WIDTH32_DEPTH1024_ADDR_WIDTH10
+data_memory_ADDR_WIDTH14
+instruction_memory_ADDR_WIDTH14
+Total number of empty modules in design 'pinaka' : 3

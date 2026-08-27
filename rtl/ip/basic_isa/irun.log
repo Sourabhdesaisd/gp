@@ -1,0 +1,70 @@
+irun(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s051: Started on Aug 08, 2026 at 00:00:03 IST
+irun
+	-access +rwc
+	alu_top32.v
+	arithmetic_unit32.v
+	branch_jump_unit.v
+	btb_file.v
+	btb_read.v
+	btb.v
+	btb_write.v
+	compare_unit32.v
+	control_unit.v
+	data_memory.v
+	data_mem_top.v
+	decode_unit.v
+	dynamic_branch_predictor.v
+	execute_stage.v
+	ex_mem_pipe.v
+	forwarding_unit.v
+	halt_fsm.v
+	hazard_unit.v
+	id_ex_pipe.v
+	if_id_pipe.v
+	if_stage_simple_btb.v
+	inst_mem.v
+	int_ctrl_logic.v
+	load_datapath.v
+	logical_unit32.v
+	mem_stage.v
+	mem_wb_pipe.v
+	pc_reg.v
+	register_file.v
+	rv32i_core.v
+	shift_unit32.v
+	store_datapath.v
+	top_decode.v
+	trace_core.v
+	wb_stage.v
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		data_memory
+		inst_mem
+		rv32i_core
+		trace_core
+	Building instance overlay tables: .................... Done
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		               Instances  Unique
+		Modules:              36      35
+		Registers:           165     163
+		Scalar wires:        167       -
+		Expanded wires:       96       3
+		Vectored wires:      138       -
+		Always blocks:        42      40
+		Initial blocks:        2       2
+		Cont. assignments:    72     142
+		Pseudo assignments:    5       5
+	Writing initial simulation snapshot: worklib.data_memory:v
+
+Trying to check out license...
+	Incisive_HDL_Simulator 15.20 - Failed
+	Xcelium_Limited_Single_Core 16.00 - Failed
+	Incisive_Enterprise_Simulator 15.20 - Failed
+	Incisive_Enterprise_Verifier 15.20 - Failed
+	Xcelium_Single_Core 16.00 - Failed
+ncsim: *F,NOLICN: Unable to checkout license for the simulation. (flag - 2) 'lic_error -5'.
+TOOL:	irun(64)	15.20-s051: Exiting on Aug 08, 2026 at 00:00:03 IST  (total: 00:00:00)

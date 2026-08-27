@@ -1,0 +1,230 @@
+xrun(64): 20.09-s009: (c) Copyright 1995-2021 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	20.09-s009: Started on Jun 20, 2026 at 00:01:02 IST
+irun
+	-access +rwc
+	alu_top32.v
+	arithmetic_unit32.v
+	branch_jump_unit.v
+	btb_file.v
+	btb_read.v
+	btb.v
+	btb_write.v
+	compare_unit32.v
+	control_unit.v
+	data_memory.v
+	data_mem_top.v
+	decode_unit.v
+	dynamic_branch_predictor.v
+	execute_stage.v
+	ex_mem_pipe.v
+	forwarding_unit.v
+	hazard_unit.v
+	id_ex_pipe.v
+	if_id_pipe.v
+	if_stage_simple_btb.v
+	inst_mem.v
+	load_datapath.v
+	logical_unit32.v
+	mem_stage.v
+	mem_wb_pipe.v
+	pc_reg.v
+	register_file.v
+	rv32i_core.v
+	shift_unit32.v
+	store_datapath.v
+	top_decode.v
+	wb_stage.v
+xrun: *W,NCEXDEP: Executable (irun) is deprecated. Use (xrun) instead.
+file: alu_top32.v
+	module worklib.alu_top32:v
+		errors: 0, warnings: 0
+file: arithmetic_unit32.v
+	module worklib.arithmetic_unit32:v
+		errors: 0, warnings: 0
+file: branch_jump_unit.v
+	module worklib.branch_jump_unit:v
+		errors: 0, warnings: 0
+file: btb_file.v
+	module worklib.btb_file:v
+		errors: 0, warnings: 0
+file: btb_read.v
+	module worklib.btb_read:v
+		errors: 0, warnings: 0
+file: btb.v
+	module worklib.btb:v
+		errors: 0, warnings: 0
+file: btb_write.v
+	module worklib.btb_write:v
+		errors: 0, warnings: 0
+file: compare_unit32.v
+	module worklib.compare_unit32:v
+		errors: 0, warnings: 0
+file: control_unit.v
+	module worklib.control_unit:v
+		errors: 0, warnings: 0
+file: data_memory.v
+	module worklib.data_memory:v
+		errors: 0, warnings: 0
+file: data_mem_top.v
+	module worklib.data_mem_top:v
+		errors: 0, warnings: 0
+file: decode_unit.v
+	module worklib.decode_unit:v
+		errors: 0, warnings: 0
+file: dynamic_branch_predictor.v
+	module worklib.dynamic_branch_predictor:v
+		errors: 0, warnings: 0
+file: execute_stage.v
+	module worklib.execute_stage:v
+		errors: 0, warnings: 0
+file: ex_mem_pipe.v
+	module worklib.ex_mem_pipe:v
+		errors: 0, warnings: 0
+file: forwarding_unit.v
+	module worklib.forwarding_unit:v
+		errors: 0, warnings: 0
+file: hazard_unit.v
+	module worklib.hazard_unit:v
+		errors: 0, warnings: 0
+file: id_ex_pipe.v
+	module worklib.id_ex_pipe:v
+		errors: 0, warnings: 0
+file: if_id_pipe.v
+	module worklib.if_id_pipe:v
+		errors: 0, warnings: 0
+file: if_stage_simple_btb.v
+	module worklib.if_stage_simple_btb:v
+		errors: 0, warnings: 0
+file: inst_mem.v
+	module worklib.inst_mem:v
+		errors: 0, warnings: 0
+file: load_datapath.v
+	module worklib.load_datapath:v
+		errors: 0, warnings: 0
+file: logical_unit32.v
+	module worklib.logical_unit32:v
+		errors: 0, warnings: 0
+file: mem_stage.v
+	module worklib.mem_stage:v
+		errors: 0, warnings: 0
+file: mem_wb_pipe.v
+	module worklib.mem_wb_pipe:v
+		errors: 0, warnings: 0
+file: pc_reg.v
+	module worklib.pc_reg:v
+		errors: 0, warnings: 0
+file: register_file.v
+	module worklib.register_file:v
+		errors: 0, warnings: 0
+file: rv32i_core.v
+	module worklib.rv32i_core:v
+		errors: 0, warnings: 0
+file: shift_unit32.v
+	module worklib.shift_unit32:v
+		errors: 0, warnings: 0
+file: store_datapath.v
+	module worklib.store_datapath:v
+		errors: 0, warnings: 0
+file: top_decode.v
+	module worklib.top_decode:v
+		errors: 0, warnings: 0
+file: wb_stage.v
+	module worklib.wb_stage:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		data_memory
+		inst_mem
+		rv32i_core
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.wb_stage:v <0x7a304925>
+			streams:   2, words:   368
+		worklib.mem_wb_pipe:v <0x66427f94>
+			streams:   3, words:  2493
+		worklib.load_datapath:v <0x1b91658c>
+			streams:   3, words:  1956
+		worklib.store_datapath:v <0x15d36b3e>
+			streams:   1, words:  1824
+		worklib.ex_mem_pipe:v <0x5237dfb2>
+			streams:   3, words:  3035
+		worklib.branch_jump_unit:v <0x102cc668>
+			streams:  10, words:  2709
+		worklib.compare_unit32:v <0x5dc5d3a2>
+			streams:   1, words:   515
+		worklib.shift_unit32:v <0x29ceadda>
+			streams:   2, words:  1572
+		worklib.logical_unit32:v <0x43e865ec>
+			streams:   1, words:   396
+		worklib.arithmetic_unit32:v <0x5ae42899>
+			streams:   3, words:  2655
+		worklib.alu_top32:v <0x44b9966b>
+			streams:   2, words:   532
+		worklib.execute_stage:v <0x7531eb6b>
+			streams:   8, words:  2692
+		worklib.forwarding_unit:v <0x1d415dd2>
+			streams:   1, words:  1216
+		worklib.id_ex_pipe:v <0x15c3d6d3>
+			streams:   4, words: 11308
+		worklib.hazard_unit:v <0x27c1c85c>
+			streams:   3, words:  2778
+		worklib.register_file:v <0x3dd2bab3>
+			streams:   6, words:  2346
+		worklib.control_unit:v <0x175dba5d>
+			streams:   1, words: 51152
+		worklib.decode_unit:v <0x37b6ee20>
+			streams:   2, words:  2641
+		worklib.top_decode:v <0x1fad3bfa>
+			streams:   4, words:   470
+		worklib.if_id_pipe:v <0x16cdca3c>
+			streams:   4, words:  2387
+		worklib.btb_file:v <0x7e267898>
+			streams:  14, words:  7628
+		worklib.dynamic_branch_predictor:v <0x3e1b8bb5>
+			streams:   3, words:  1126
+		worklib.btb_write:v <0x6e7df103>
+			streams:   5, words:  6475
+		worklib.btb_read:v <0x238d5354>
+			streams:   3, words:   757
+		worklib.btb:v <0x203d4ef2>
+			streams:   3, words:  2175
+		worklib.pc_reg:v <0x78591372>
+			streams:   2, words:   682
+		worklib.if_stage_simple_btb:v <0x23d29fac>
+			streams:   3, words:   946
+		worklib.rv32i_core:v <0x542e2372>
+			streams:   7, words:  1160
+		worklib.inst_mem:v <0x1f2b9173>
+			streams:   4, words:  2666
+		worklib.data_memory:v <0x1aa90280>
+			streams:   9, words: 12647
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		               Instances  Unique
+		Modules:              33      32
+		Registers:           122     120
+		Scalar wires:        105       -
+		Expanded wires:      128       4
+		Vectored wires:      103       -
+		Always blocks:        30      28
+		Initial blocks:        2       2
+		Cont. assignments:    59      96
+		Pseudo assignments:    3       3
+	Writing initial simulation snapshot: worklib.data_memory:v
+Loading snapshot worklib.data_memory:v .................... Done
+xcelium> source /tools/cadence_march2021/XCELIUM2009/tools/xcelium/files/xmsimrc
+xcelium> run
+================================================
+Loading data memory from:                                                                                                                 program_data.hex
+Memory type             : byte memory
+Input hex type          : 32-bit word hex
+Address mapping         : addr[19:0]
+================================================
+Open failed on file "program_data.hex". No such file or directory
+ERROR: Cannot open data file:                                                                                                                 program_data.hex
+Simulation complete via $finish(1) at time 0 FS + 0
+./data_memory.v:129             $finish;
+xcelium> exit
+TOOL:	xrun(64)	20.09-s009: Exiting on Jun 20, 2026 at 00:01:03 IST  (total: 00:00:01)

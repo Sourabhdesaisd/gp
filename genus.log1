@@ -1,0 +1,557 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+Version: 17.22-s017_1, built Sun Apr 01 2018
+Options: 
+Date:    Wed Mar 01 23:02:52 2023
+Host:    compute1-srv.nis.vivartan.com (x86_64 w/Linux 3.10.0-1160.119.1.el7.x86_64) (28cores*112cpus*2physical cpus*Intel(R) Xeon(R) Platinum 8173M CPU @ 2.00GHz 39424KB) (527373444KB)
+OS:      CentOS Linux release 7.9.2009 (Core)
+
+Checking out license: Genus_Synthesis
+
+Loading tool scripts...
+
+Finished loading tool scripts (9 seconds elapsed).
+
+WARNING: This version of the tool is 1795 days old.
+@genus:root: 1> source syn_final.tcl
+Sourcing './syn_final.tcl' (Wed Mar 01 23:03:29 IST 2023)...
+#@ Begin verbose source syn_final.tcl
+@file(syn_final.tcl) 7: set DESIGN_NAME "pinaka"
+@file(syn_final.tcl) 8: set GEN_EFF high
+@file(syn_final.tcl) 9: set MAP_EFF high
+@file(syn_final.tcl) 10: set OPT_EFF high
+@file(syn_final.tcl) 12: set_db opt_tns true
+Error   : <Start> word is not recognized. [TUI-182] [set_db]
+        : 'opt_tns' is not a recognized object/attribute. Type 'help root:' to get a list of all supported objects and attributes.
+        : Check <Start> object/attribute.
+#@ End verbose source syn_final.tcl
+1
+@genus:root: 2> help *pot*
+No matching commands/attributes/object types found
+@genus:root: 3> help *opt*
+
+============================================================
+Commands:
+  add_assign_buffer_options:
+                        # controls replacement of assign statements during synthesis
+  get_remove_assign_options:
+                        # get options set for replacement of assign statements during synthesis
+  remove_assigns_without_optimization:
+                        # replaces assign statements with buffers
+  report_boundary_opt:  # 
+  syn_opt:              # synthesizes the design to optimized gates
+
+
+============================================================
+Objects:
+  command_option:       # 
+
+
+============================================================
+Attributes:
+  show_report_options(root):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Show report options in header.
+  lbr_seq_in_out_phase_opto(root):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Allows to propagate inverters through sequential instances.
+  optimize_net_area(root):
+                        # bool { 1 0 true false }, read/write, default=true, indices={}
+                        # Optimizing for net area in global mapping and incremental optimization.true: optimization minimizes total area, i.e. cell and net area; false: net area is ignored for optimization and only cell area minimized.
+  optimize_constant_feedback_seqs(root):
+                        # bool { 1 0 true false }, read/write, default=true, indices={}
+                        # Allow optimization of uninitialized feedback flip-flops.
+  dp_analytical_opt(root):
+                        # enum { off standard extreme }, read/write, default=standard, indices={}
+                        # Specifies the effort level for global datapath optimization.
+  boundary_optimize_invert_hpins_renaming_extension(root):
+                        # string, read/write, default=_BAR, indices={}
+                        # Extension to be appended on pin or net name, when boundary pin is inverted.
+  tns_opto(root):       # bool { 1 0 true false }, read/write, default=true, indices={}
+                        # Optimize all negative slack endpoints.
+  optimize_constant_0_flops(root):
+                        # bool { 1 0 true false }, read/write, default=true, indices={}
+                        # Allow constant 0 propagation through flip-flops.
+  optimize_constant_1_flops(root):
+                        # bool { 1 0 true false }, read/write, default=true, indices={}
+                        # Allow constant 1 propagation through flip-flops.
+  optimize_merge_flops(root):
+                        # bool { 1 0 true false }, read/write, default=true, indices={}
+                        # Allow merging of equivalent flip-flops.
+  optimize_seq_x_to(root):
+                        # string, read/write, default=0, indices={}
+                        # Value that should be use to optimize constant X sequential instances.
+  boundary_optimize_constant_hpins(root):
+                        # bool { 1 0 true false }, read/write, default=true, indices={}
+                        # Allow constant propagation through hierarchical boundary pins.
+  boundary_optimize_equal_opposite_hpins(root):
+                        # bool { 1 0 true false }, read/write, default=true, indices={}
+                        # Allow connection of hierarchical boundary pins through equal/opposite boundary pins.
+  boundary_optimize_feedthrough_hpins(root):
+                        # bool { 1 0 true false }, read/write, default=true, indices={}
+                        # Allow routing of feedthrough boundary pins around a hierarchical instance.
+  boundary_optimize_invert_hpins(root):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Allow inversion of hierarchical boundary pins.
+  optimize_constant_latches(root):
+                        # bool { 1 0 true false }, read/write, default=true, indices={}
+                        # Allow constant propagation through latches.
+  optimize_merge_latches(root):
+                        # bool { 1 0 true false }, read/write, default=true, indices={}
+                        # Allow merging of equivalent latches.
+  use_multi_clks_latency_uncertainty_optimize(root):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Use multi-clock latencies and uncertainties at a pin in optimization.
+  power_optimization_effort(root):
+                        # enum { low medium high }, read/write, default=medium, indices={}
+                        # Optimization effort to be used to optimize power.
+  lp_multi_vt_optimization_effort(root):
+                        # enum { low medium high }, read/write, default=low, indices={}
+                        # Multiple-vt leakage power optimization flow.
+  lp_iopt_mvt_multipass_flow(root):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Controls the Multi-VT optimization in Iopt. 
+  et_license_options(root):
+                        # string, read/write, default={}, indices={}
+                        # Additional options to pass to when invoking Encounter Test.
+  retime_optimize_reset(root):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Determines whether the reset should be dropped if the computation results in a dont_care value.
+  stop_at_iopt_state(root):
+                        # int, read/write, default=no_value, indices={}
+                        # Increment optimization to stop at this state.
+  iopt_sequential_duplication(root):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Turns on/off sequential duplication during incremental optimization.
+  iopt_sequential_resynthesis(root):
+                        # bool { 1 0 true false }, read/write, default=true, indices={}
+                        # Turns on/off sequential resynthesis during incremental optimization.
+  iopt_sequential_resynthesis_min_effort(root):
+                        # enum { low medium high }, read/write, default=high, indices={}
+                        # Minimum effort during incremental optimization for sequential resynthesis to kick in.
+  iopt_enable_floating_output_check(root):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Controls use of multiple output gates with floating outputs during incremental optimization.
+  iopt_force_constant_removal(root):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Force constant removal during incremental optimization even if cost worsens.
+  iopt_allow_tiecell_with_inversion(root):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Allow tiecell with inverter if one of the tie hi/lo cell is not found.
+  iopt_ultra_optimization(root):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Enables ultra optimization in incremental optimization to achieve best QOR with higher runtime.
+  iopt_lp_power_analysis_effort(root):
+                        # enum { low medium high }, read/write, default=low, indices={}
+                        # Power analysis effort level for iopt.
+  iopt_remap_avoided_cells(root):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Replace avoided cells in mapped netlist.
+  boundary_optimize_invert_hpins_rename_nets(root):
+                        # bool { 1 0 true false }, read/write, default=true, indices={}
+                        # Rename nets driven by inverted hierarchical boundary output pins.
+  iopt_enable_parallelization(root):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Enable parallel iopt when super thread servers are set.
+  iopt_temp_directory(root):
+                        # string, read/write, default=., indices={}
+                        # Specifies the directory where parallel incremental optimization can write temporary files.
+  pbs_iopt_summary(root):
+                        # string, read-only, default=no_value, indices={}
+                        # Prints the partition metrics summary for the pbs iopt stage.
+  control_logic_optimization(root):
+                        # enum { basic advanced none }, read/write, default=basic, indices={}
+                        # Controls the effort level for optimization of control logic (basic/advanced/none).
+  optimize_yield(root): # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Optimize design for yield.
+  syn_opt_effort(root): # enum { none low medium high express extreme }, read/write, default=high, indices={}
+                        # Effort level for 'syn_opt' command.
+  hdl_vhdl_range_opto(root):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # When set to false disables range optimization in VHDL.
+  hdl_error_on_read_vdp_option(root):
+                        # bool { 1 0 true false }, read/write, default=true, indices={}
+                        # Error out on vdp option given to read_hdl command.
+  invs_pre_place_opt(root):
+                        # bool { 1 0 true false }, read/write, default=true, indices={}
+                        # Perform buffer & inverter pair removal during placement.
+  invs_place_opt_design(root):
+                        # bool { 1 0 true false }, read/write, default=true, indices={}
+                        # Enable concurrent placement and optimization flow in Innovus.
+  invs_opt_leakage(root):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Attribute to enable the 'optPower' command in Innovus after place_opt_design.
+  invs_write_scandef_options(root):
+                        # string, read/write, default={}, indices={}
+                        # Attribute to pass switches to 'write_scandef' command used to write the scan def to be passed to Innovus.
+  invs_opt_leakage_options(root):
+                        # string, read/write, default={}, indices={}
+                        # Attribute to pass switches to 'optPower' command in Innovus which is run after place_opt_design. For example '-allowResizing'.
+  write_design_create_boundary_opto_file(root):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # To write out boundary_opto file with write_design -innovus, if this attribute is set to true.
+  phys_pre_place_iopt(root):
+                        # string, read/write, default=auto, indices={}
+                        # Run fast parallel optimization before placement in the physical flow.
+  phys_binary_mux_opt(design):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Allow physical aware structuring binary mux rebalance optimization for design.
+  lp_optimize_dynamic_power_first(design):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Optimize dynamic power first.
+  lp_power_optimization_weight(design):
+                        # double, read/write, default=no_value, indices={}
+                        # Leakage power weight in total power cost calculation for optimization. Valid value for this attribute is between 0 and 1.
+  control_logic_optimization(design):
+                        # enum { basic advanced none inherited }, read/write, default=inherited, indices={}
+                        # Controls the effort level for optimization of control logic on this module (basic/advanced/none/inherited).
+  boundary_optimize_constant_hpins(module):
+                        # enum { 1 0 true false inherited }, read/write, default=inherited, indices={}
+                        # Allow constant propagation through hierarchical boundary pins.
+  boundary_optimize_equal_opposite_hpins(module):
+                        # enum { 1 0 true false inherited }, read/write, default=inherited, indices={}
+                        # Allow connection of hierarchical boundary pins through equal/opposite boundary pins.
+  boundary_optimize_feedthrough_hpins(module):
+                        # enum { 1 0 true false inherited }, read/write, default=inherited, indices={}
+                        # Allow routing of feedthrough boundary pins around a hierarchical instance.
+  boundary_optimize_invert_hpins(module):
+                        # enum { 1 0 true false inherited }, read/write, default=inherited, indices={}
+                        # Allow inversion of hierarchical boundary pins.
+  boundary_opto(module):
+                        # enum { false true strict_no }, read/write, default=true, indices={}
+                        # Control boundary-optimization on a subdesign.
+  control_logic_optimization(module):
+                        # enum { basic advanced none inherited }, read/write, default=inherited, indices={}
+                        # Controls the effort level for optimization of control logic on this module (basic/advanced/none/inherited).
+  iopt_allow_inst_dup(hinst):
+                        # bool { 1 0 true false }, read/write, default=true, indices={}
+                        # Turns on/off duplication on this instance.
+  optimize_constant_0_seq(inst):
+                        # enum { 1 0 true false inherited }, read/write, default=inherited, indices={}
+                        # Allow constant 0 propagation through sequential instances.
+  optimize_constant_1_seq(inst):
+                        # enum { 1 0 true false inherited }, read/write, default=inherited, indices={}
+                        # Allow constant 1 propagation through sequential instances.
+  optimize_merge_seq(inst):
+                        # enum { 1 0 true false inherited }, read/write, default=inherited, indices={}
+                        # Allow merging of equivalent sequential instances.
+  optimize_constant_feedback_seq(inst):
+                        # bool { 1 0 true false }, read/write, default=true, indices={}
+                        # Allow constant propagation through feedback sequential instances.
+  allow_seq_in_out_phase_opto(inst):
+                        # bool { 1 0 true false }, read/write, default=true, indices={}
+                        # Allow phase inversion on sequential instance.
+  iopt_allow_inst_dup(inst):
+                        # bool { 1 0 true false }, read/write, default=true, indices={}
+                        # Turns on/off duplication on this instance.
+  iopt_avoid_tiecell_replacement(port):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Avoids tie-cell replacement on pins, ports and subports. 
+  iopt_avoid_tiecell_replacement(hport):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Avoids tie-cell replacement on pins, ports and subports. 
+  boundary_optimize_hpin_invertible(hport):
+                        # bool { 1 0 true false }, read-only, default=false, indices={}
+                        # Information whether hierarchical boundary pin can be inverted.
+  iopt_avoid_tiecell_replacement(pin):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Avoids tie-cell replacement on pins, ports and subports. 
+  boundary_optimize_constant_hpins(hpin):
+                        # enum { 1 0 true false inherited }, read/write, default=inherited, indices={}
+                        # Allow constant propagation through hierarchical boundary pins.
+  boundary_optimize_equal_opposite_hpins(hpin):
+                        # enum { 1 0 true false inherited }, read/write, default=inherited, indices={}
+                        # Allow connection of hierarchical boundary pins through equal/opposite boundary pins.
+  boundary_optimize_feedthrough_hpins(hpin):
+                        # enum { 1 0 true false inherited }, read/write, default=inherited, indices={}
+                        # Allow routing of feedthrough boundary pins around a hierarchical instance.
+  boundary_optimize_invert_hpins(hpin):
+                        # enum { 1 0 true false inherited }, read/write, default=inherited, indices={}
+                        # Allow inversion of hierarchical boundary pins.
+  iopt_avoid_tiecell_replacement(hpin):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Avoids tie-cell replacement on pins, ports and subports. 
+  boundary_optimize_hpin_invertible(hpin):
+                        # bool { 1 0 true false }, read-only, default=false, indices={}
+                        # Information whether hierarchical boundary pin can be inverted.
+  tool_options(flow):   # string, read/write, default={}, indices={}
+                        # Tool options for use in this flow.
+@genus:root: 4> get_db tns_opto
+true
+@genus:root: 5> help *opt*
+
+============================================================
+Commands:
+  add_assign_buffer_options:
+                        # controls replacement of assign statements during synthesis
+  get_remove_assign_options:
+                        # get options set for replacement of assign statements during synthesis
+  remove_assigns_without_optimization:
+                        # replaces assign statements with buffers
+  report_boundary_opt:  # 
+  syn_opt:              # synthesizes the design to optimized gates
+
+
+============================================================
+Objects:
+  command_option:       # 
+
+
+============================================================
+Attributes:
+  show_report_options(root):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Show report options in header.
+  lbr_seq_in_out_phase_opto(root):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Allows to propagate inverters through sequential instances.
+  optimize_net_area(root):
+                        # bool { 1 0 true false }, read/write, default=true, indices={}
+                        # Optimizing for net area in global mapping and incremental optimization.true: optimization minimizes total area, i.e. cell and net area; false: net area is ignored for optimization and only cell area minimized.
+  optimize_constant_feedback_seqs(root):
+                        # bool { 1 0 true false }, read/write, default=true, indices={}
+                        # Allow optimization of uninitialized feedback flip-flops.
+  dp_analytical_opt(root):
+                        # enum { off standard extreme }, read/write, default=standard, indices={}
+                        # Specifies the effort level for global datapath optimization.
+  boundary_optimize_invert_hpins_renaming_extension(root):
+                        # string, read/write, default=_BAR, indices={}
+                        # Extension to be appended on pin or net name, when boundary pin is inverted.
+  tns_opto(root):       # bool { 1 0 true false }, read/write, default=true, indices={}
+                        # Optimize all negative slack endpoints.
+  optimize_constant_0_flops(root):
+                        # bool { 1 0 true false }, read/write, default=true, indices={}
+                        # Allow constant 0 propagation through flip-flops.
+  optimize_constant_1_flops(root):
+                        # bool { 1 0 true false }, read/write, default=true, indices={}
+                        # Allow constant 1 propagation through flip-flops.
+  optimize_merge_flops(root):
+                        # bool { 1 0 true false }, read/write, default=true, indices={}
+                        # Allow merging of equivalent flip-flops.
+  optimize_seq_x_to(root):
+                        # string, read/write, default=0, indices={}
+                        # Value that should be use to optimize constant X sequential instances.
+  boundary_optimize_constant_hpins(root):
+                        # bool { 1 0 true false }, read/write, default=true, indices={}
+                        # Allow constant propagation through hierarchical boundary pins.
+  boundary_optimize_equal_opposite_hpins(root):
+                        # bool { 1 0 true false }, read/write, default=true, indices={}
+                        # Allow connection of hierarchical boundary pins through equal/opposite boundary pins.
+  boundary_optimize_feedthrough_hpins(root):
+                        # bool { 1 0 true false }, read/write, default=true, indices={}
+                        # Allow routing of feedthrough boundary pins around a hierarchical instance.
+  boundary_optimize_invert_hpins(root):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Allow inversion of hierarchical boundary pins.
+  optimize_constant_latches(root):
+                        # bool { 1 0 true false }, read/write, default=true, indices={}
+                        # Allow constant propagation through latches.
+  optimize_merge_latches(root):
+                        # bool { 1 0 true false }, read/write, default=true, indices={}
+                        # Allow merging of equivalent latches.
+  use_multi_clks_latency_uncertainty_optimize(root):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Use multi-clock latencies and uncertainties at a pin in optimization.
+  power_optimization_effort(root):
+                        # enum { low medium high }, read/write, default=medium, indices={}
+                        # Optimization effort to be used to optimize power.
+  lp_multi_vt_optimization_effort(root):
+                        # enum { low medium high }, read/write, default=low, indices={}
+                        # Multiple-vt leakage power optimization flow.
+  lp_iopt_mvt_multipass_flow(root):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Controls the Multi-VT optimization in Iopt. 
+  et_license_options(root):
+                        # string, read/write, default={}, indices={}
+                        # Additional options to pass to when invoking Encounter Test.
+  retime_optimize_reset(root):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Determines whether the reset should be dropped if the computation results in a dont_care value.
+  stop_at_iopt_state(root):
+                        # int, read/write, default=no_value, indices={}
+                        # Increment optimization to stop at this state.
+  iopt_sequential_duplication(root):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Turns on/off sequential duplication during incremental optimization.
+  iopt_sequential_resynthesis(root):
+                        # bool { 1 0 true false }, read/write, default=true, indices={}
+                        # Turns on/off sequential resynthesis during incremental optimization.
+  iopt_sequential_resynthesis_min_effort(root):
+                        # enum { low medium high }, read/write, default=high, indices={}
+                        # Minimum effort during incremental optimization for sequential resynthesis to kick in.
+  iopt_enable_floating_output_check(root):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Controls use of multiple output gates with floating outputs during incremental optimization.
+  iopt_force_constant_removal(root):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Force constant removal during incremental optimization even if cost worsens.
+  iopt_allow_tiecell_with_inversion(root):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Allow tiecell with inverter if one of the tie hi/lo cell is not found.
+  iopt_ultra_optimization(root):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Enables ultra optimization in incremental optimization to achieve best QOR with higher runtime.
+  iopt_lp_power_analysis_effort(root):
+                        # enum { low medium high }, read/write, default=low, indices={}
+                        # Power analysis effort level for iopt.
+  iopt_remap_avoided_cells(root):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Replace avoided cells in mapped netlist.
+  boundary_optimize_invert_hpins_rename_nets(root):
+                        # bool { 1 0 true false }, read/write, default=true, indices={}
+                        # Rename nets driven by inverted hierarchical boundary output pins.
+  iopt_enable_parallelization(root):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Enable parallel iopt when super thread servers are set.
+  iopt_temp_directory(root):
+                        # string, read/write, default=., indices={}
+                        # Specifies the directory where parallel incremental optimization can write temporary files.
+  pbs_iopt_summary(root):
+                        # string, read-only, default=no_value, indices={}
+                        # Prints the partition metrics summary for the pbs iopt stage.
+  control_logic_optimization(root):
+                        # enum { basic advanced none }, read/write, default=basic, indices={}
+                        # Controls the effort level for optimization of control logic (basic/advanced/none).
+  optimize_yield(root): # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Optimize design for yield.
+  syn_opt_effort(root): # enum { none low medium high express extreme }, read/write, default=high, indices={}
+                        # Effort level for 'syn_opt' command.
+  hdl_vhdl_range_opto(root):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # When set to false disables range optimization in VHDL.
+  hdl_error_on_read_vdp_option(root):
+                        # bool { 1 0 true false }, read/write, default=true, indices={}
+                        # Error out on vdp option given to read_hdl command.
+  invs_pre_place_opt(root):
+                        # bool { 1 0 true false }, read/write, default=true, indices={}
+                        # Perform buffer & inverter pair removal during placement.
+  invs_place_opt_design(root):
+                        # bool { 1 0 true false }, read/write, default=true, indices={}
+                        # Enable concurrent placement and optimization flow in Innovus.
+  invs_opt_leakage(root):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Attribute to enable the 'optPower' command in Innovus after place_opt_design.
+  invs_write_scandef_options(root):
+                        # string, read/write, default={}, indices={}
+                        # Attribute to pass switches to 'write_scandef' command used to write the scan def to be passed to Innovus.
+  invs_opt_leakage_options(root):
+                        # string, read/write, default={}, indices={}
+                        # Attribute to pass switches to 'optPower' command in Innovus which is run after place_opt_design. For example '-allowResizing'.
+  write_design_create_boundary_opto_file(root):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # To write out boundary_opto file with write_design -innovus, if this attribute is set to true.
+  phys_pre_place_iopt(root):
+                        # string, read/write, default=auto, indices={}
+                        # Run fast parallel optimization before placement in the physical flow.
+  phys_binary_mux_opt(design):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Allow physical aware structuring binary mux rebalance optimization for design.
+  lp_optimize_dynamic_power_first(design):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Optimize dynamic power first.
+  lp_power_optimization_weight(design):
+                        # double, read/write, default=no_value, indices={}
+                        # Leakage power weight in total power cost calculation for optimization. Valid value for this attribute is between 0 and 1.
+  control_logic_optimization(design):
+                        # enum { basic advanced none inherited }, read/write, default=inherited, indices={}
+                        # Controls the effort level for optimization of control logic on this module (basic/advanced/none/inherited).
+  boundary_optimize_constant_hpins(module):
+                        # enum { 1 0 true false inherited }, read/write, default=inherited, indices={}
+                        # Allow constant propagation through hierarchical boundary pins.
+  boundary_optimize_equal_opposite_hpins(module):
+                        # enum { 1 0 true false inherited }, read/write, default=inherited, indices={}
+                        # Allow connection of hierarchical boundary pins through equal/opposite boundary pins.
+  boundary_optimize_feedthrough_hpins(module):
+                        # enum { 1 0 true false inherited }, read/write, default=inherited, indices={}
+                        # Allow routing of feedthrough boundary pins around a hierarchical instance.
+  boundary_optimize_invert_hpins(module):
+                        # enum { 1 0 true false inherited }, read/write, default=inherited, indices={}
+                        # Allow inversion of hierarchical boundary pins.
+  boundary_opto(module):
+                        # enum { false true strict_no }, read/write, default=true, indices={}
+                        # Control boundary-optimization on a subdesign.
+  control_logic_optimization(module):
+                        # enum { basic advanced none inherited }, read/write, default=inherited, indices={}
+                        # Controls the effort level for optimization of control logic on this module (basic/advanced/none/inherited).
+  iopt_allow_inst_dup(hinst):
+                        # bool { 1 0 true false }, read/write, default=true, indices={}
+                        # Turns on/off duplication on this instance.
+  optimize_constant_0_seq(inst):
+                        # enum { 1 0 true false inherited }, read/write, default=inherited, indices={}
+                        # Allow constant 0 propagation through sequential instances.
+  optimize_constant_1_seq(inst):
+                        # enum { 1 0 true false inherited }, read/write, default=inherited, indices={}
+                        # Allow constant 1 propagation through sequential instances.
+  optimize_merge_seq(inst):
+                        # enum { 1 0 true false inherited }, read/write, default=inherited, indices={}
+                        # Allow merging of equivalent sequential instances.
+  optimize_constant_feedback_seq(inst):
+                        # bool { 1 0 true false }, read/write, default=true, indices={}
+                        # Allow constant propagation through feedback sequential instances.
+  allow_seq_in_out_phase_opto(inst):
+                        # bool { 1 0 true false }, read/write, default=true, indices={}
+                        # Allow phase inversion on sequential instance.
+  iopt_allow_inst_dup(inst):
+                        # bool { 1 0 true false }, read/write, default=true, indices={}
+                        # Turns on/off duplication on this instance.
+  iopt_avoid_tiecell_replacement(port):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Avoids tie-cell replacement on pins, ports and subports. 
+  iopt_avoid_tiecell_replacement(hport):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Avoids tie-cell replacement on pins, ports and subports. 
+  boundary_optimize_hpin_invertible(hport):
+                        # bool { 1 0 true false }, read-only, default=false, indices={}
+                        # Information whether hierarchical boundary pin can be inverted.
+  iopt_avoid_tiecell_replacement(pin):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Avoids tie-cell replacement on pins, ports and subports. 
+  boundary_optimize_constant_hpins(hpin):
+                        # enum { 1 0 true false inherited }, read/write, default=inherited, indices={}
+                        # Allow constant propagation through hierarchical boundary pins.
+  boundary_optimize_equal_opposite_hpins(hpin):
+                        # enum { 1 0 true false inherited }, read/write, default=inherited, indices={}
+                        # Allow connection of hierarchical boundary pins through equal/opposite boundary pins.
+  boundary_optimize_feedthrough_hpins(hpin):
+                        # enum { 1 0 true false inherited }, read/write, default=inherited, indices={}
+                        # Allow routing of feedthrough boundary pins around a hierarchical instance.
+  boundary_optimize_invert_hpins(hpin):
+                        # enum { 1 0 true false inherited }, read/write, default=inherited, indices={}
+                        # Allow inversion of hierarchical boundary pins.
+  iopt_avoid_tiecell_replacement(hpin):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Avoids tie-cell replacement on pins, ports and subports. 
+  boundary_optimize_hpin_invertible(hpin):
+                        # bool { 1 0 true false }, read-only, default=false, indices={}
+                        # Information whether hierarchical boundary pin can be inverted.
+  tool_options(flow):   # string, read/write, default={}, indices={}
+                        # Tool options for use in this flow.
+@genus:root: 6> 
+@genus:root: 6> get_db syn_global_effort
+none
+@genus:root: 7> set_db syn_opt_effort true
+Error   : Failed to parse attribute string. [TUI-23] [set_db]
+        : Unable to convert the string 'true' to type 'enum' for the attribute 'syn_opt_effort'.
+        : To see the usage/description for this attribute, type '::legacy::set_attribute -h <attr_name> *' (in legacy UI mode) or 'help * <attr_name> -detail' (in CUI mode).
+1
+@genus:root: 8> get_db syn_opt_effort true
+Error   : Invalid value for object attribute. [TUI-194] [get_db]
+        : Invalid value 'true' is provided for 'syn_opt_effort' attribute.
+        : Refer to the Command Reference for details.
+1
+@genus:root: 9> get_db syn_opt_effort
+high
+@genus:root: 10> report_timing -from [all_registers] -to [all_registers]
+Error   : No designs are available. A design must first be read in and elaborated. [TUI-10] [all_registers]
+        : There is no design here.
+        : A design must first be read in with 'read_hdl' command and elaborated with 'elaborate' command.
+Failed on find_unique_design
+@genus:root: 11> report_timing -from [all_register] -to [all_register]
+Error   : No designs are available. A design must first be read in and elaborated. [TUI-10] [all_registers]
+        : There is no design here.
+Failed on find_unique_design
+@genus:root: 12> exit
+Normal exit.

@@ -1,0 +1,5 @@
+//
+// File created by:  xrun
+// Do not modify this file
+
+s1::(20Jun2026:00:01:02):( irun -access +rwc alu_top32.v arithmetic_unit32.v branch_jump_unit.v btb_file.v btb_read.v btb.v btb_write.v compare_unit32.v control_unit.v data_memory.v data_mem_top.v decode_unit.v dynamic_branch_predictor.v execute_stage.v ex_mem_pipe.v forwarding_unit.v hazard_unit.v id_ex_pipe.v if_id_pipe.v if_stage_simple_btb.v inst_mem.v load_datapath.v logical_unit32.v mem_stage.v mem_wb_pipe.v pc_reg.v register_file.v rv32i_core.v shift_unit32.v store_datapath.v top_decode.v wb_stage.v )

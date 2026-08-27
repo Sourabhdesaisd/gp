@@ -1,0 +1,46 @@
+set rpt_file "timing_maxpath1600.rpt"
+set threshold 1.0
+
+set fp [open $rpt_file r]
+set report [read $fp]
+close $fp
+
+set lines [split $report "\n"]
+
+set startpoint ""
+set endpoint ""
+set slack ""
+set count 0
+
+foreach line $lines {
+
+    # Get startpoint
+    if {[regexp {^Startpoint:\s+(\S+)} $line -> sp]} {
+        set startpoint $sp
+    }
+
+    # Get endpoint
+    if {[regexp {^Endpoint:\s+(\S+)} $line -> ep]} {
+        set endpoint $ep
+    }
+
+    # Get slack
+    if {[regexp {slack\s+\([^)]+\)\s+(-?\d+(?:\.\d+)?)\s*$} $line -> slk]} {
+
+        set slack $slk
+
+        if {$slack < 0.0} {
+            incr count
+
+            puts "----------------------------------------"
+            puts "Path       : $count"
+            puts "Startpoint : $startpoint"
+            puts "Endpoint   : $endpoint"
+            puts "Slack      : $slack ns"
+        }
+    }
+}
+
+puts "========================================"
+puts "Total paths with slack < $threshold ns : $count"
+puts "========================================"
